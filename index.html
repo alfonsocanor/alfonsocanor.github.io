@@ -10,13 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0" />
     
     <script>
-    var loc = window.location.toString(),
-    params = loc.split('?')[1],
-    iframe = document.getElementById('myIframe');
-
-    iframe.src = iframe.src + '?' + params;
+      window.onload = (event) => {
+          setTimeout(function(){
+              if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                  document.getElementById("toyota-footer").style.position = "absolute";
+                  document.getElementById("toyota-footer").style.width = "100%";
+                  document.getElementById("toyota-footer").style.bottom = "0";
+              }
+          }, 1000);
+      }
     </script>
-    
+
     <style>
       #toyota-footer{
         position: absolute;
