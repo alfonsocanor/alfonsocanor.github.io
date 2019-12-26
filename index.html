@@ -3,27 +3,34 @@
   
   <head>
     <style>
-.myIframe {
-     position: relative;
-     padding-bottom: 65.25%;
-     padding-top: 30px;
-     height: 0;
-     overflow: auto; 
-     -webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
-     border: solid black 1px;
-} 
-.myIframe iframe {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%;
+}
+
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
     </style>
   </head>
 <body style="margin:0px;padding:0px;overflow:hidden">
-<div class="myIframe"> 
-<iframe src="https://salestrack-rastreamentodopedidos.cs78.force.com/"></iframe>
+<div class="intrinsic-container intrinsic-container-16x9"> 
+<iframe src="https://salestrack-rastreamentodopedidos.cs78.force.com/" allowfullscreen></iframe>
 </div>
 </body>
 </html>
