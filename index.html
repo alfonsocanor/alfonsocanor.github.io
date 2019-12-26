@@ -11,8 +11,8 @@
     
     <script>
     var loc = window.location.toString(),
-    var params = loc.split('?')[1],
-    var iframe = document.getElementById('myIframe');
+    params = loc.split('?')[1],
+    iframe = document.getElementById('myIframe');
 
     iframe.src = iframe.src + '?' + params;
     </script>
