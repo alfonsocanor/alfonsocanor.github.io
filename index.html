@@ -18,8 +18,19 @@
                   document.getElementById("toyota-footer").style.bottom = "0";
               }
           }, 1000);
+            var url    = "the URL inside the iframe";
+
+            var params = "?"+window.location.search.substr(1);
+
+
+            var iframe_url = url+params;
+
+
+            document.getElementById("iframe").src = iframe_url;
+
       }
     </script>
+    
 
     <style>
       #toyota-footer{
